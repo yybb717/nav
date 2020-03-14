@@ -1,0 +1,159 @@
+/*css reset*/
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+/*style*/
+body {
+  background: #eee;
+}
+.globalHeader {
+  margin: 20px; /*让header在body中居中*/
+}
+.searchForm {
+  display: flex;
+  justify-content: space-between; /*用flex布局让input和按钮各在两边*/
+}
+/*响应式页面：媒体查询*/
+@media (min-width: 500px) {
+  /*当屏幕最小宽度为500px，也就是当页面宽度大于500px时，再给form加一个的最大宽度为400px*/
+  .searchForm {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.searchForm > input {
+  width: 100%; /*让input变宽*/
+  margin-right: 10px; /*input有个右边距，就和button隔开了，好看*/
+  height: 40px;
+  padding: 0 10px; /*输入文字后左边不会紧粘着左边界，好看点*/
+  border: none;
+  border: 1px soli #ddd;
+  border-radius: 4px; /*给边界加个圆角，但是input有个默认边界，必须先覆盖，才可以在对边界加圆角*/
+}
+.searchForm > button {
+  white-space: nowrap; /*不让按钮被input挤压换行*/
+  padding: 0 28px; /*加了内边距，让搜索两个字不会充满整个按钮，好看点*/
+  border: none;
+  border-radius: 4px; /*给边界加个圆角，但是input有个默认边界，必须先覆盖，才可以在对边界加圆角*/
+  background: #0282b9;
+  color: white;
+  font-size: 16px; /*从Figmal中复制一些需要的样式代码*/
+}
+
+.globalMain {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.siteList {
+  display: flex;
+  flex-wrap: wrap; /*让里面的li成一行，而且折行*/
+  margin: 20px; /*对于手机来说，让整个都居中，并且和上面的header有点间距*/
+  justify-content: space-between;
+}
+@media (min-width: 500px) {
+  .siteList {
+    margin-left: 0;
+    margin-right: -25px;
+    justify-content: flex-start;
+  }
+  .siteList > li {
+    margin-right: 25px;
+  }
+  .globalHeader {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+}
+.siteList > li {
+  margin-bottom: 10px; /*上下隔开点，好看点*/
+}
+.siteList > li .site {
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; /*用flex布局让里面logo和link居中*/
+  background: white;
+  border: 1px solid #ddd; /*加边界*/
+  border-radius: 4px; /*给边界加个圆角*/
+  padding: 20px 0; /*跟着设计图来呀 我想变高点，不要用height，不得不用才用，所以这里用padding变高*/
+  position: relative;
+  cursor: pointer;
+}
+.siteList > li .site > .logo {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /*用flex布局让里面的东西居中*/
+  font-size: 64px; /*设置里面的文字大小*/
+  text-transform: uppercase;
+}
+.siteList > li .site > .link {
+  font-size: 14px;
+  margin-top: 4px; /*让logo和link隔开点，好看点*/
+}
+.siteList > li .site > .close {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  display: none;
+  cursor: default;
+}
+.siteList > li .site:hover > .close {
+  display: block;
+}
+.siteList > li > .addButton {
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border: 1px solid #ddd; /*加边界*/
+  border-radius: 4px; /*给边界加个圆角*/
+  padding: 20px 0;
+}
+
+.siteList > li .addButton > .icon-wrapper {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /*让svg在icon-wrapper中居中*/
+}
+
+.siteList > li .addButton > .icon-wrapper > .icon {
+  width: 64px;
+  height: 64px;
+}
+.siteList > li .addButton > .link {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+
+/*# sourceMappingURL=style.551b7bf8.css.map */
