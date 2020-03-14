@@ -1,0 +1,42 @@
+Arguments: 
+  D:\Software\nodejs\node.exe D:\Software\Yarn\bin\yarn.js build
+
+PATH: 
+  D:\Software\Cmder\vendor\git-for-windows\mingw64\bin;D:\Software\Cmder\vendor\git-for-windows\usr\bin;C:\Users\jj\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;D:\Software\nodejs;D:\Software\Yarn\bin;D:\Software\hugo;C:\Users\jj\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\jj\AppData\Local\Programs\Python\Python37;C:\Users\jj\Desktop\Scripts;C:\Users\jj\Desktop;C:\Users\jj\AppData\Local\Microsoft\WindowsApps;C:\Users\jj\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\jj\AppData\Roaming\npm;C:\Users\jj\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  10.18.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\jj\jirengu\nav-1\package.json: Unexpected token : in JSON at position 10
+      at JSON.parse (<anonymous>)
+      at D:\Software\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (D:\Software\Yarn\lib\cli.js:310:30)
+      at D:\Software\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  "scripts" : {
+    "build": "rm -rf dist && parcel build src/index.html --no-minify --public-url ./"
+  },
+  
+  {
+    "name": "nav-1",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:yybb717/nav.git",
+    "author": "yybb717 <2638143715@qq.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
