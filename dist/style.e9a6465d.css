@@ -27,7 +27,7 @@ body {
   background: #eee;
 }
 .globalHeader {
-  margin: 20px; /*让header在body中居中*/
+  margin: 20px; /*让header在body中居中,这是注释*/
 }
 .searchForm {
   display: flex;
@@ -156,4 +156,4 @@ body {
 }
 
 
-/*# sourceMappingURL=style.551b7bf8.css.map */
+/*# sourceMappingURL=style.e9a6465d.css.map */

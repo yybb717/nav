@@ -134,7 +134,7 @@ var hashMap = xObject || [{
 }];
 
 var removeX = function removeX(url) {
-  return url.replace("https://www.", "").replace("https://", "").replace("www.", "").replace(/\/.*/, '');
+  return url.replace("https://www.", "").replace("https://", "").replace("www.", "").replace(/\/.*/, "");
 };
 
 var render = function render() {
@@ -142,10 +142,10 @@ var render = function render() {
   hashMap.forEach(function (node, index) {
     console.log(index);
     var $li = $("<li>\n        <div class=\"site\">\n          <div class=\"logo\">".concat(removeX(node.url)[0].toUpperCase(), "</div>\n          <div class=\"link\">").concat(removeX(node.url), "</div>\n           <div class=\"close\"> <svg class=\"icon\">\n                <use xlink:href=\"#icon-close\"></use>\n              </svg></div>\n        </div>\n    </li>")).insertBefore($lastLi);
-    $li.on('click', function () {
+    $li.on("click", function () {
       window.open(node.url);
     });
-    $li.on('click', '.close', function (e) {
+    $li.on("click", ".close", function (e) {
       e.stopPropagation();
       hashMap.splice(index, 1);
       render();
@@ -174,7 +174,7 @@ window.onbeforeunload = function () {
   window.localStorage.setItem("x", string);
 };
 
-$(document).on('keypress', function (e) {
+$(document).on("keypress", function (e) {
   //按下键盘a，打印出一个对象，有个属性是keyCode: 97和属性key是a的Unicode字符编码
   var key = e.key; //const key = e.key
 
@@ -187,4 +187,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.d7057f8c.js.map
+//# sourceMappingURL=main.3ecf2bb1.js.map
